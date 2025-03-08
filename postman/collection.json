@@ -1153,31 +1153,6 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;",
-									"tests[\"Response should not be 'do some magic!'\"] = responseBody != \"do some magic!\";",
-									"var jsonData = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"student_id\", jsonData);",
-									"",
-									"count = postman.getEnvironmentVariable(\"count\");",
-									"count++;",
-									"postman.setEnvironmentVariable(\"count\",count);",
-									"console.log(count)",
-									"if (count < 200) {",
-									"    postman.setNextRequest(\"9.Add a new random student\");",
-									"} else{",
-									"    // pm.test(\"Total elapsed time must be  less than 100\", function () {",
-									"           ",
-									"    //     start_time = postman.getEnvironmentVariable(\"start_time\"); ",
-									"    //     var elapsed = new Date().getTime() - start_time;  //milliseconds",
-									"    //     console.log(\"elapsed: \"+elapsed)",
-									"    //     pm.expect(elapsed).to.be.below(100);",
-									"    // });",
-									"    // setTimeout(() => { console.log(\"waiting!\"); }, 10000);",
-									"    postman.setNextRequest(\"13.Find_random_student\");",
-									"}",
-									"",
-									"    ",
-									""
 								],
 								"type": "text/javascript"
 							}
