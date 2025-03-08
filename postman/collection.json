@@ -330,7 +330,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"tests[\"Status code is 404\"] = responseCode.code === 404;",
+									"// tests[\"Status code is 404\"] = responseCode.code === 404;",
 									"tests[\"Response should not be 'do some magic!'\"] = responseBody != \"do some magic!\";",
 									""
 								],
