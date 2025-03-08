@@ -76,7 +76,7 @@ def get_by_id(student_id=None):
     try:
         student = students_collection.find_one({"_id": ObjectId(student_id)})
         if not student:
-            return 'not found', 404
+            return 'not found!', 404
 
         student["_id"] = str(student["_id"])  # Convert ObjectId to string
         return student
